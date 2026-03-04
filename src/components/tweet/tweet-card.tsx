@@ -148,7 +148,7 @@ export const TweetCard = ({ tweet }: TweetCardProps) => {
             <span className="shrink-0 text-muted-foreground">@{tweet.user.username}</span>
             <span className="text-muted-foreground">·</span>
             <span className="shrink-0 text-muted-foreground hover:underline">
-              {tweet.createdAt}
+              {new Date(tweet.createdAt).toLocaleTimeString()}
             </span>
           </div>
 

@@ -98,6 +98,7 @@ export interface TrendingTopic {
   tweetCount: number;
 }
 
+
 export const trendingTopics: TrendingTopic[] = [
   { id: "1", category: "Technology", topic: "#ReactJS", tweetCount: 125000 },
   { id: "2", category: "Programming", topic: "TypeScript", tweetCount: 89000 },
@@ -168,37 +169,59 @@ export const users: User[] = [
   },
 ];
 
+export const sampleImages = [
+  "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600",
+  "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600",
+];
+
+export const sampleVideos = [
+  "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+];
+
+
 // Sample tweets (static)
 export const sampleTweets: Tweet[] = [
   {
     id: "tweet-1",
     user: users[0],
-    content:
-      "Just shipped a new feature! 🚀 The team has been working hard on this.",
-    createdAt: "2024-03-01T12:00:00Z",
-    relativeTime: "2d",
+    content: "Just shipped a new feature! 🚀",
+    createdAt: "2026-03-01T12:00:00Z",
     likes: 1200,
     retweets: 300,
     replies: 45,
     views: 12000,
+    relativeTime : "now",
   },
   {
     id: "tweet-2",
+    relativeTime : "now",
     user: users[1],
-    content: "Hot take: TypeScript makes JavaScript bearable.",
-    createdAt: "2024-03-02T08:00:00Z",
-    relativeTime: "1d",
+    content: "This UI redesign looks clean!",
+    createdAt: "2026-03-02T10:00:00Z",
+    media: [
+      {
+        type: "image",
+        url: sampleImages[0],
+      },
+    ],
     likes: 890,
     retweets: 120,
     replies: 32,
     views: 9800,
   },
   {
+    relativeTime : "now",
     id: "tweet-3",
     user: users[2],
-    content: "Another day, another CSS bug in Safari.",
-    createdAt: "2024-03-03T10:00:00Z",
-    relativeTime: "15h",
+    content: "Check out this demo video 🔥",
+    createdAt: "2026-03-03T08:00:00Z",
+    media: [
+      {
+        type: "video",
+        url: sampleVideos[0],
+        thumbnail: sampleImages[1],
+      },
+    ],
     likes: 540,
     retweets: 90,
     replies: 12,
